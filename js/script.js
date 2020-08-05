@@ -1,17 +1,21 @@
 "use strict";
 
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '');
 
-const data = {
-    name: '',
-    surname: '',
-    age: '',
-    student: false
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-data.name = prompt("Write your name", "");
-data.surname = prompt("Write your surname", "");
-data.age = prompt("Write your age", "");
-data.student = confirm('Are you student?');
+const a = prompt('Какой фильм смотрели?', ''),
+      b = prompt('Оценка?', ''),
+      c = prompt('Какой фильм смотрели?', ''),
+      d = prompt('Оценка?', '');
 
-alert(`Hello, ${data.surname} ${data.name}! Stutent: ${data.student}, you are ${data.age} years old`);
-document.write(`Hello, my friend ${data.surname} ${data.name}`);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
